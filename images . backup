@@ -1,0 +1,6 @@
+<div class="hero-images-grid">
+                        <img src="https://images.unsplash.com/photo-1586297135537-94bc9ba060aa?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" class="grid-img g-img-1" alt="User">
+                        <img src="https://images.unsplash.com/photo-1573497620053-ea5300f94f21?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" class="grid-img g-img-2" alt="Colleagues">
+                        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" class="grid-img g-img-3" alt="Meeting">
+                        <img src="https://cdni.iconscout.com/illustration/premium/thumb/chat-bot-4636695-3853906.png?f=webp" class="grid-img g-img-4" alt="Illustration">
+                    </div>

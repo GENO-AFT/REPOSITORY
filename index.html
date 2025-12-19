@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GENOAFT TECH</title>
+    <link rel="icon" type="image/jpeg" href="Assets/Genoaft logo.jpeg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Essential CSS for View Management */
+        [id^="view-"] {
+            display: none;
+        }
+        #view-home {
+            display: block;
+        }
+
+        /* Styles for About & Services Components */
+        .about-hero, .services-hero {
+            background: linear-gradient(135deg, #0f2027 0%, #203a43 100%);
+            color: white;
+            padding: 160px 0 100px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .subtitle {
+            font-size: 1.5rem;
+            color: #00c6ff;
+            margin-bottom: 2rem;
+            font-weight: 600;
+        }
+
+        .about-section, .our-services-overview, .how-it-works, .technology-stack {
+            padding: 100px 0;
+        }
+
+        .mission-vision {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            margin-top: 4rem;
+        }
+
+        .mission, .vision {
+            background: white;
+            padding: 3rem;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            text-align: center;
+            position: relative;
+        }
+
+        .mission::before, .vision::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 6px;
+            background: linear-gradient(to right, #00c6ff, #0f2027);
+            border-radius: 16px 16px 0 0;
+        }
+
+        .service-category {
+            background: white;
+            padding: 3rem;
+            border-radius: 16px;
+            margin-bottom: 3rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+
+        .service-details {
+            margin-bottom: 3rem;
+            padding-left: 2rem;
+            border-left: 3px solid #eef2f3;
+        }
+
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .step {
+            text-align: center;
+            padding: 2rem;
+            background: #f8f9fa;
+            border-radius: 12px;
+            transition: transform 0.3s ease;
+        }
+
+        .step-number {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #00c6ff, #0f2027);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin: 0 auto 1.5rem;
+        }
+
+        .tech-tags span {
+            background: #eef2f3;
+            color: #0f2027;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            display: inline-block;
+            margin: 5px;
+        }
+
+        /* Form Styling */
+        .recruitment-form {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+        }
+        .form-row { margin-bottom: 20px; }
+        .req { color: red; }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <span><i class="fas fa-cube"></i> GENOAFT TECH</span>
+                <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#" class="nav-link" data-target="home">HOME</a></li>
+                    <li><a href="#" class="nav-link" data-target="about">ABOUT US</a></li>
+                    <li><a href="#" class="nav-link" data-target="services">OUR SERVICES</a></li>
+                    <li><a href="#">OUR TEAM</a></li>
+                    <li><a href="#" class="nav-link" data-target="join">JOIN US</a></li>
+                </ul>
+            </nav>
+            <button class="cta-button nav-link" data-target="join">Initialize Project</button>
+        </div>
+    </header>
+
+    <!-- VIEW 1: HOME PAGE -->
+    <div id="view-home">
+        <section class="hero">
+            <div class="slide active slide-1">
+                <div class="bg-blob"></div>
+                <div class="container hero-container">
+                    <div class="slide-1-wrapper">
+                        <div class="hero-content">
+                            <span class="tagline">Beyond Connectivity</span>
+                            <h1 class="hero-title">Architecting the Neural Digital Epoch</h1>
+                            <p class="hero-desc">We don't just build interfaces; we engineer digital organisms. As a vanguard international agency, we fuse cognitive aestheticism with quantum-leap technology.</p>
+                            <button class="hero-btn nav-link" data-target="services">Deploy Solutions <i class="fas fa-arrow-right"></i></button>
+                        </div>
+                        <div class="hero-images-grid">
+                            <img src="Assets/girl and boy working.jpeg" class="grid-img g-img-1" alt="User">
+                            <img src="Assets/office work room.jpeg" class="grid-img g-img-2" alt="User">
+                            <img src="Assets/office work.jpeg" class="grid-img g-img-3" alt="User">
+                            <img src="Assets/vector image.jpeg" class="grid-img g-img-4" alt="User">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="services">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Operational Capabilities</h2>
+                    <p>Deploying military-grade digital infrastructures tailored for global dominance.</p>
+                </div>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-microchip"></i></div>
+                        <h3>Hyper-Scalable Architectures</h3>
+                        <p>We engineer the spine of your digital existence using React, Node, and WebGL ecosystems.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-fingerprint"></i></div>
+                        <h3>Versatile-Digital Services</h3>
+                        <p>Blending genuine human emotion with digital experiences to deepen engagement.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-network-wired"></i></div>
+                        <h3>Algorithmic Intelligence</h3>
+                        <p>Bespoke SaaS platforms and neural networks tailored to automate the unthinkable.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <div class="container">
+                <h2>Why Choose Us?</h2>
+                <p>We deliver reliable tech solutions that help your business grow—every single day.</p>
+                <button class="cta-button nav-link" data-target="join">JOIN US</button>
+            </div>
+        </section>
+    </div>
+
+    <!-- VIEW 2: ABOUT US PAGE -->
+    <div id="view-about">
+        <section class="about-hero">
+            <div class="container">
+                <h1>About Genoaft Tech</h1>
+                <p class="subtitle">Bridging the Gap Between Innovation and Implementation Since 2025</p>
+            </div>
+        </section>
+
+        <section class="about-section">
+            <div class="container">
+                <div class="section-title"><h2>Our Genesis</h2></div>
+                <p style="text-align: center; max-width: 900px; margin: 0 auto;">Founded in 2025, Genoaft Tech emerged from enterprise-grade infrastructure expertise. We recognized the market need for a partner capable of delivering both robust backend systems and immersive frontend experiences.</p>
+                
+                <div class="mission-vision">
+                    <div class="mission">
+                        <h3><i class="fas fa-bullseye"></i> Our Mission</h3>
+                        <p>To architect digital ecosystems that integrate enterprise reliability with innovative user experiences, empowering businesses to thrive through scalable technology.</p>
+                    </div>
+                    <div class="vision">
+                        <h3><i class="fas fa-eye"></i> Our Vision</h3>
+                        <p>To become the premier global technology partner that redefines how businesses interact with digital intelligence and drives sustainable growth.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- VIEW 3: OUR SERVICES PAGE -->
+    <div id="view-services">
+        <section class="services-hero">
+            <div class="container">
+                <h1>Unified Technology Solutions</h1>
+                <p class="subtitle">Merging Infrastructure with Innovative Digital Experiences</p>
+            </div>
+        </section>
+
+        <section class="our-services-overview">
+            <div class="container">
+                <div class="service-category">
+                    <h3><i class="fas fa-server"></i> Enterprise IT Solutions </h3>
+                    <div class="service-details">
+                        <h4>Web Development & Design</h4>
+                        <ul>
+                            <li><i class="fas fa-check"></i> Custom Website Development (React, Angular)</li>
+                            <li><i class="fas fa-check"></i> E-commerce Platforms & Payment Security</li>
+                            <li><i class="fas fa-check"></i> CMS Development (WordPress, Drupal)</li>
+                        </ul>
+                    </div>
+                    <div class="service-details">
+                        <h4>Mobile App Development</h4>
+                        <ul>
+                            <li><i class="fas fa-check"></i> Native iOS/Android (Swift, Kotlin)</li>
+                            <li><i class="fas fa-check"></i> Cross-Platform (React Native, Flutter)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="service-category">
+                    <h3><i class="fas fa-brain"></i> Digital Innovation </h3>
+                    <div class="service-details">
+                        <h4>AI & Machine Learning Solutions</h4>
+                        <ul>
+                            <li><i class="fas fa-check"></i> Custom AI Models & Predictive Analytics</li>
+                            <li><i class="fas fa-check"></i> NLP & Chatbot Integration</li>
+                        </ul>
+                    </div>
+                    <div class="service-details">
+                        <h4>Blockchain & Web3</h4>
+                        <ul>
+                            <li><i class="fas fa-check"></i> Smart Contracts & DApp Development</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="how-it-works">
+            <div class="container">
+                <div class="section-title"><h2>How to Work With Us</h2></div>
+                <div class="process-steps">
+                    <div class="step"><div class="step-number">1</div><h3>Consultation</h3><p>Understanding your goals and challenges.</p></div>
+                    <div class="step"><div class="step-number">2</div><h3>Strategy</h3><p>Detailed project roadmaps and milestones.</p></div>
+                    <div class="step"><div class="step-number">3</div><h3>Deployment</h3><p>Seamless launch and performance optimization.</p></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="technology-stack">
+            <div class="container">
+                <div class="section-title"><h2>Our Technology Stack</h2></div>
+                <div class="tech-tags" style="text-align: center;">
+                    <span>React.js</span> <span>Node.js</span> <span>AWS</span> <span>Python</span> <span>TypeScript</span> <span>Docker</span> <span>MySQL</span>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- VIEW 4: JOIN US PAGE (Recruitment Form) -->
+    <div id="view-join">
+        <section class="services-hero">
+            <div class="container">
+                <h1>Join the Evolution</h1>
+                <p class="subtitle">Shape the metadata of human experience with us</p>
+            </div>
+        </section>
+
+        <div class="form-container-wrapper">
+            <div class="container">
+                <form class="recruitment-form" action="" method="POST" enctype="multipart/form-data">
+                    <div class="form-row three-col">
+                        <div class="field-group">
+                            <label>Name <span class="req">*</span></label>
+                            <input type="text" name="name" required placeholder="Full Name">
+                        </div>
+                        <div class="field-group">
+                            <label>Email <span class="req">*</span></label>
+                            <input type="email" name="email" required placeholder="email@address.com">
+                        </div>
+                        <div class="field-group">
+                            <label>Mobile Phone <span class="req">*</span></label>
+                            <input type="tel" name="phone" required placeholder="+1 234 567 890">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="field-group">
+                            <label>Address <span class="req">*</span></label>
+                            <input type="text" name="address1" required placeholder="Street Address">
+                        </div>
+                    </div>
+
+                    <div class="options-grid">
+                        <div class="option-col">
+                            <label class="main-label">Qualification <span class="req">*</span></label>
+                            <label class="radio-line"><input type="radio" name="qualification" value="Graduate"> Graduate</label>
+                            <label class="radio-line"><input type="radio" name="qualification" value="Diploma"> Diploma</label>
+                            <label class="main-label" style="margin-top:20px;">Experience <span class="req">*</span></label>
+                            <label class="radio-line"><input type="radio" name="experience" value="Fresher"> Fresher</label>
+                            <label class="radio-line"><input type="radio" name="experience" value="Experienced"> Experienced</label>
+                        </div>
+
+                        <div class="option-col">
+                            <label class="main-label">Attach Resume</label>
+                            <input type="file" name="resume">
+                            <p style="font-size: 0.8rem; margin-top: 10px;">Max size: 10MB</p>
+                        </div>
+
+                        <div class="option-col">
+                            <label class="main-label">Desired Work <span class="req">*</span></label>
+                            <label class="radio-line"><input type="radio" name="work_type" value="Full-time"> Full-time</label>
+                            <label class="radio-line"><input type="radio" name="work_type" value="Part-time"> Part-time</label>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="form-submit-btn" style="margin-top: 30px; width: 100%; background: #0f2027; color: white; padding: 15px; border: none; border-radius: 8px; cursor: pointer; font-weight: bold;">Submit Application</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Genoaft Tech</h3>
+                    <p>Architecting the interface between humanity and the machine since 2025.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Secure Channel</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Meerut </li>
+                        <li><i class="fas fa-call"></i> 7906180733 </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright"><p>&copy; 2025 Genoaft Tech Solutions. All Systems Operational.</p></div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const navLinks = document.querySelectorAll('.nav-link');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const target = this.getAttribute('data-target');
+                    document.querySelectorAll('[id^="view-"]').forEach(v => v.style.display = 'none');
+                    const targetView = document.getElementById('view-' + target);
+                    if (targetView) {
+                        targetView.style.display = 'block';
+                        window.scrollTo(0, 0);
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
